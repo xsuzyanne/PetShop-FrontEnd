@@ -1,4 +1,4 @@
-<button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+<!-- <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
   {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
 </button>
 <mat-stepper [linear]="isLinear" #stepper>
@@ -109,11 +109,11 @@
           </div>
         </div>
       </mat-card-content>
-      <!-- <mat-form-field appearance="fill">
+      <mat-form-field appearance="fill">
         <mat-label>Address</mat-label>
         <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
                required>
-      </mat-form-field> -->
+      </mat-form-field>
       <div>
         <button mat-button matStepperPrevious>Back</button>
         <button mat-button matStepperNext>Next</button>
@@ -128,11 +128,11 @@
       <button mat-button (click)="stepper.reset()">Reset</button>
     </div>
   </mat-step>
-</mat-stepper>
+</mat-stepper> -->
 
 
 
-<!-- <form [formGroup]="addressForm" novalidate (ngSubmit)="onSubmit()">
+<form [formGroup]="addressForm" novalidate (ngSubmit)="onSubmit()">
   <mat-card class="shipping-card">
     <mat-card-header>
       <mat-card-title>Informações de Envio</mat-card-title>
@@ -231,4 +231,4 @@
       <button mat-raised-button color="primary" type="submit">Enviar</button>
     </mat-card-actions>
   </mat-card>
-</form> -->
+</form>

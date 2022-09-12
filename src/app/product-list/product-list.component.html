@@ -1,0 +1,21 @@
+<mat-paginator [length]="100"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]"
+              aria-label="Select page">
+</mat-paginator>
+
+<div *ngFor="let product of products">
+
+  <h3>
+  <a
+  [title]="product.name + ' detalhes'"
+  [routerLink]="['/products', product.id]">
+  {{ product.name }}
+  </a>
+  </h3>
+
+  <p *ngIf="product.description">
+ Descrição: {{ product.description }}
+  </p>
+
+</div>

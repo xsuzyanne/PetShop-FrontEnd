@@ -1,23 +1,18 @@
-<p>
   <mat-toolbar>
-   <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+  <img src="..\assets\PetShopLogoP.png" alt="Logo de Cachorro Laranja com teclado de computador">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
     <mat-icon>menu</mat-icon>
   </button>
-  <span>My App</span>
+  <span>PetShop Code</span>
   <span class="example-spacer"></span>
   <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
     <mat-icon>favorite</mat-icon>
   </button>
   <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-   <mat-icon>share</mat-icon>
+   <mat-icon><a [routerLink]="'/compartilhar'">share</a></mat-icon>
  </button>
+ <button mat-icon-button class="example-icon" ><mat-icon><a>shopping_basket</a></mat-icon></button>
 </mat-toolbar>
-</p>
-<mat-paginator [length]="100"
-              [pageSize]="10"
-              [pageSizeOptions]="[5, 10, 25, 100]"
-              aria-label="Select page">
-</mat-paginator>
 
    <!-- <mat-sidenav-container class="sidenav-container">
  <mat-sidenav #drawer class="sidenav" fixedInViewport

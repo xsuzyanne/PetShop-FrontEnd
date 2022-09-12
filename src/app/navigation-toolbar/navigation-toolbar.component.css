@@ -19,3 +19,12 @@
 .example-spacer {
   flex: 1 1 auto;
 }
+
+.mat-toolbar{
+  background-color: #4E0D3A;
+}
+
+.mat-toolbar-row {
+  background-color: #FEF9EA;
+}
+

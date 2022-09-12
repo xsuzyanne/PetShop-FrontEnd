@@ -92,14 +92,14 @@ export class ShipAddressComponent {
   constructor(private fb: FormBuilder) {}
 
   ngOnInit() {
-    this.firstFormGroup = this.fb.group({
-    });
-    this.secondFormGroup = this.fb.group({
-      secondCtrl: ['', Validators.required]
-    });
+    // this.firstFormGroup = this.fb.group({
+    // });
+    // this.secondFormGroup = this.fb.group({
+    //   secondCtrl: ['', Validators.required]
+    // });
   }
-  firstFormGroup: FormGroup;
-  secondFormGroup: FormGroup;
+  // firstFormGroup: FormGroup;
+  // secondFormGroup: FormGroup;
 
   onSubmit(): void {
     alert('Thanks!');
