@@ -19,6 +19,9 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatStepperModule } from '@angular/material/stepper'
 import { MatSliderModule } from '@angular/material/slider';
+// import { registerLocaleData, DecimalPipe } from '@angular/common';
+// import localePt from "@angular/common/locales/pt";
+// registerLocaleData(localePt)
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -27,6 +30,9 @@ import { NavigationToolbarComponent } from './navigation-toolbar/navigation-tool
 import { ShipAddressComponent } from './ship-address/ship-address.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { LoginComponent } from './login/login.component';
+import { UserRegistrationComponent } from './user-registration/user-registration.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +41,10 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     ShipAddressComponent,
     GridListComponent,
     ProductListComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    LoginComponent,
+    UserRegistrationComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,7 +52,9 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
       { path: 'products/:productId', component: ProductDetailsComponent },
-      { path: 'compartilhar', component: ShipAddressComponent }
+      { path: 'compartilhar', component: ShipAddressComponent },
+      { path: 'login', component: LoginComponent },
+      { path: 'cadastro', component: UserRegistrationComponent }
     ]),
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -64,7 +75,9 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     MatStepperModule,
     MatSliderModule,
   ],
-  providers: [],
+  providers: [
+    // { provide: LOCALE_ID, useValue: 'pt'}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
