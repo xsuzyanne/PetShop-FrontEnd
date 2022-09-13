@@ -19,6 +19,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatStepperModule } from '@angular/material/stepper'
 import { MatSliderModule } from '@angular/material/slider';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -27,6 +29,8 @@ import { NavigationToolbarComponent } from './navigation-toolbar/navigation-tool
 import { ShipAddressComponent } from './ship-address/ship-address.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+
+import { ProductService } from './services/product.service';
 
 @NgModule({
   declarations: [
@@ -40,6 +44,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
   imports: [
     BrowserModule,
     ReactiveFormsModule,
+    HttpClientModule,
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
       { path: 'products/:productId', component: ProductDetailsComponent },
@@ -64,7 +69,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     MatStepperModule,
     MatSliderModule,
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
