@@ -56,7 +56,8 @@ import { ProductService } from './services/product.service';
       { path: 'products/:productId', component: ProductDetailsComponent },
       { path: 'compartilhar', component: ShipAddressComponent },
       { path: 'login', component: LoginComponent },
-      { path: 'cadastro', component: UserRegistrationComponent }
+      { path: 'cadastro', component: UserRegistrationComponent },
+      { path: 'cart', component: CartComponent }
     ]),
     AppRoutingModule,
     BrowserAnimationsModule,
