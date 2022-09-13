@@ -19,14 +19,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatStepperModule } from '@angular/material/stepper'
 import { MatSliderModule } from '@angular/material/slider';
-<<<<<<< HEAD
-// import { registerLocaleData, DecimalPipe } from '@angular/common';
-// import localePt from "@angular/common/locales/pt";
-// registerLocaleData(localePt)
-=======
 import { HttpClientModule } from '@angular/common/http';
 
->>>>>>> b816c42fdaf971884acae76d70f63210f8181733
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -83,13 +77,7 @@ import { ProductService } from './services/product.service';
     MatStepperModule,
     MatSliderModule,
   ],
-<<<<<<< HEAD
-  providers: [
-    // { provide: LOCALE_ID, useValue: 'pt'}
-  ],
-=======
   providers: [ProductService],
->>>>>>> b816c42fdaf971884acae76d70f63210f8181733
   bootstrap: [AppComponent]
 })
 export class AppModule { }
