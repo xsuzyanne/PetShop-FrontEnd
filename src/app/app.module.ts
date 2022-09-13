@@ -19,9 +19,14 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatStepperModule } from '@angular/material/stepper'
 import { MatSliderModule } from '@angular/material/slider';
+<<<<<<< HEAD
 // import { registerLocaleData, DecimalPipe } from '@angular/common';
 // import localePt from "@angular/common/locales/pt";
 // registerLocaleData(localePt)
+=======
+import { HttpClientModule } from '@angular/common/http';
+
+>>>>>>> b816c42fdaf971884acae76d70f63210f8181733
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -33,6 +38,8 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { LoginComponent } from './login/login.component';
 import { UserRegistrationComponent } from './user-registration/user-registration.component';
 import { CartComponent } from './cart/cart.component';
+
+import { ProductService } from './services/product.service';
 
 @NgModule({
   declarations: [
@@ -49,6 +56,7 @@ import { CartComponent } from './cart/cart.component';
   imports: [
     BrowserModule,
     ReactiveFormsModule,
+    HttpClientModule,
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
       { path: 'products/:productId', component: ProductDetailsComponent },
@@ -75,9 +83,13 @@ import { CartComponent } from './cart/cart.component';
     MatStepperModule,
     MatSliderModule,
   ],
+<<<<<<< HEAD
   providers: [
     // { provide: LOCALE_ID, useValue: 'pt'}
   ],
+=======
+  providers: [ProductService],
+>>>>>>> b816c42fdaf971884acae76d70f63210f8181733
   bootstrap: [AppComponent]
 })
 export class AppModule { }
