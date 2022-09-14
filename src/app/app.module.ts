@@ -1,4 +1,4 @@
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { LayoutModule } from '@angular/cdk/layout';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -53,14 +53,7 @@ import { ProductService } from './services/product.service';
     BrowserModule,
     ReactiveFormsModule,
     HttpClientModule,
-    RouterModule.forRoot([
-      { path: '', component: ProductListComponent },
-      { path: 'products/:productId', component: ProductDetailsComponent },
-      { path: 'compartilhar', component: ShipAddressComponent },
-      { path: 'login', component: LoginComponent },
-      { path: 'cadastro', component: UserRegistrationComponent },
-      { path: 'cart', component: CartComponent }
-    ]),
+    RouterModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     LayoutModule,

@@ -9,10 +9,10 @@ import { FormBuilder, Validators } from '@angular/forms';
 export class UserRegistrationComponent implements OnInit {
 
   firstFormGroup = this._formBuilder.group({
-    firstCtrl: ['', Validators.required],
+    nameCtrl: ['', Validators.required],
   });
   secondFormGroup = this._formBuilder.group({
-    secondCtrl: ['', Validators.required],
+    emailCtrl: ['', [Validators.required, Validators.email]],
   });
   isLinear = true;
 
