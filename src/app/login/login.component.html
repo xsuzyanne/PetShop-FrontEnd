@@ -1,4 +1,11 @@
-<div class="example-container">
+
+  <div class="example-button-container">
+    <button mat-fab aria-label="Icon button with a person icon">
+    <mat-icon>person</mat-icon>
+    </button>
+  </div>
+  <h3>Acesse sua Conta</h3>
+<h4>Informe seu usuário e senha de cadastro</h4>
 <div>
   <mat-form-field appearance="fill">
     <mat-label>Tipo de Usuário</mat-label>
@@ -25,4 +32,9 @@
   </button>
 </mat-form-field>
 </div>
-</div>
+<h5>OU</h5>
+<h4>Novo no PetShopCode? <a [routerLink]="'/cadastro'">Crie sua conta</a></h4>
+
+
+
+<button><a [routerLink]="''">Home</a></button>

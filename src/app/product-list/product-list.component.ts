@@ -11,8 +11,10 @@ export class ProductListComponent implements OnInit {
 
   public products: Product[] = [];
 
-  constructor(private productService: ProductService) {      
+  constructor(private productService: ProductService) {
   }
+
+  //panelOpenState = false;
 
   getProducts(): void {
     this.productService.getProducts().subscribe(res => {
@@ -21,7 +23,7 @@ export class ProductListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getProducts();    
+    this.getProducts();
   }
 
 }

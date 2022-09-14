@@ -5,17 +5,17 @@
   </button>
   <span>PetShop Code</span>
   <span class="example-spacer"></span>
-  <button mat-icon-button class="example-icon">
-    <mat-icon class="material-symbols-outlined"><a [routerLink]="'/login'" > person</a></mat-icon>
+  <button mat-raised-button class="example-button-row">
+    <a [routerLink]="'/login'" ><mat-icon class="material-symbols-outlined">person</mat-icon>Entre  ou cadastre-se</a>
   </button>
-  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+  <!-- <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
     <mat-icon>favorite</mat-icon>
-  </button>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-   <mat-icon><a [routerLink]="'/compartilhar'">share</a></mat-icon>
-  </button>
+  </button> -->
+  <!-- <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+   <a [routerLink]="'/compartilhar'"><mat-icon>share</mat-icon></a>
+  </button> -->
   <button mat-icon-button class="example-icon" >
-  <mat-icon><a routerLink="/cart">shopping_basket</a></mat-icon>
+  <a routerLink="/cart"><mat-icon>shopping_basket</mat-icon></a>
   </button>
 
 </mat-toolbar>

@@ -19,7 +19,9 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatStepperModule } from '@angular/material/stepper'
 import { MatSliderModule } from '@angular/material/slider';
+import { MatExpansionModule } from '@angular/material/expansion';
 import { HttpClientModule } from '@angular/common/http';
+import { MatChipsModule } from '@angular/material/chips'
 
 
 
@@ -77,6 +79,8 @@ import { ProductService } from './services/product.service';
     MatMenuModule,
     MatStepperModule,
     MatSliderModule,
+    MatExpansionModule,
+    MatChipsModule
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]
