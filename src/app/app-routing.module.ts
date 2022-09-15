@@ -1,3 +1,4 @@
+import { GridListComponent } from './grid-list/grid-list.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ShipAddressComponent } from './ship-address/ship-address.component';
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: 'compartilhar', component: ShipAddressComponent },
   { path: 'login', component: LoginComponent },
   { path: 'cadastro', component: UserRegistrationComponent },
-  { path: 'cart', component: CartComponent }
+  { path: 'cart', component: CartComponent },
+  { path: 'gridlist', component: GridListComponent }
 ];
 
 @NgModule({
