@@ -1,3 +1,6 @@
+<body>
+
+
 <app-navigation-toolbar></app-navigation-toolbar>
 
 <mat-paginator [length]="100"
@@ -6,19 +9,25 @@
               aria-label="Select page">
 </mat-paginator>
 
-<div *ngFor="let product of products">
 
-  <h3>
-  <a
-  [title]="product.name + ' detalhes'"
-  [routerLink]="['/products', product.id]">
-  {{ product.name }}
-  </a>
-  </h3>
-
-  <p *ngIf="product.description">
- Descrição: {{ product.description }}
-  </p>
-  <img [src]="product.url_image">
-
-</div>
+<mat-grid-list cols="5" rowHeight="450px">
+  <mat-grid-tile *ngFor="let product of products" >
+    <mat-card class="dashboard-card">
+      <mat-card-header>
+        <mat-card-title>
+          <a [title]="product.name + ' detalhes'" [routerLink]="['/products', product.id]">
+            {{ product.name }} </a>
+        </mat-card-title>
+          <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+            <mat-icon>more_vert</mat-icon></button>
+              <mat-menu #menu="matMenu" xPosition="before">
+                <button mat-menu-item>Editar</button>
+                <button mat-menu-item>Remove</button>
+              </mat-menu>
+      </mat-card-header>
+      <img mat-card-image [src]="product.url_image">
+      <button type="button" (click)="addToCart(product)">Adicionar ao carrinho</button>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+</body>

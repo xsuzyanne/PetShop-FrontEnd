@@ -3,3 +3,16 @@
   background-color: #F9AA33;
 
 }
+
+  .mat-card-title {
+    font-size: smaller;
+  }
+
+  a {
+    color: white;
+    font-style: none;
+  }
+
+  .dashboard-card {
+    background-color: #344955 ;
+  }
