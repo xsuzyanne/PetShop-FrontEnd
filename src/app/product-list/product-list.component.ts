@@ -1,3 +1,4 @@
+import { LoginService } from './../services/login.service';
 import { ProductService } from '../services/product.service';
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../products';
@@ -13,12 +14,15 @@ import { map } from 'rxjs/operators';
 })
 export class ProductListComponent implements OnInit {
 
+  admin = false;
+
   public products: Product[] = [];
 
   constructor(
     private productService: ProductService,
     private cartService: CartService,
-    private breakpointObserver: BreakpointObserver) {
+    private breakpointObserver: BreakpointObserver,
+    private loginService: LoginService) {
   }
 
   addToCart(product: Product) {
@@ -58,6 +62,10 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit(): void {
     this.getProducts();
+    if(this.loginService.getTipo() == '1'){
+       this.admin = true
+    }
+
   }
 
 }

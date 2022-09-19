@@ -16,3 +16,7 @@
   .dashboard-card {
     background-color: #344955 ;
   }
+
+  .visibility{
+    visibility: hidden;
+  }

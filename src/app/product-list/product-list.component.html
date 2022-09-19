@@ -3,7 +3,7 @@
 
 <app-navigation-toolbar></app-navigation-toolbar>
 
-<mat-grid-list cols="5" rowHeight="100px">
+<mat-grid-list cols="4" rowHeight="100px">
   <mat-grid-tile>
     <mat-card class="dashboard-class">
       <mat-card-header>
@@ -58,12 +58,20 @@
           <a [title]="product.name + ' detalhes'" [routerLink]="['/products', product.id]">
             {{ product.name }} </a>
         </mat-card-title>
+        <div *ngIf="admin" >
           <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
-            <mat-icon>more_vert</mat-icon></button>
-              <mat-menu #menu="matMenu" xPosition="before">
-                <button mat-menu-item>Editar</button>
-                <button mat-menu-item>Remove</button>
-              </mat-menu>
+            <mat-icon>more_vert</mat-icon>
+          </button>
+        </div>
+        <div *ngIf="!admin">
+          <button mat-icon-button class="more-button visibility" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+        </div>
+          <mat-menu #menu="matMenu" xPosition="before">
+            <button mat-menu-item>Editar</button>
+            <button mat-menu-item>Remove</button>
+          </mat-menu>
       </mat-card-header>
       <img mat-card-image [src]="product.url_image">
       <button type="button" (click)="addToCart(product)">Adicionar ao carrinho</button>
