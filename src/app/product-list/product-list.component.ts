@@ -64,6 +64,8 @@ export class ProductListComponent implements OnInit {
     this.getProducts();
     if(this.loginService.getTipo() == '1'){
        this.admin = true
+    } else {
+      this.admin = false
     }
 
   }

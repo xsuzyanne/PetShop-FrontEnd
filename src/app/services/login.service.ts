@@ -16,11 +16,13 @@ import { Usuario } from '../usuario';
 
 
     public Authenticate(username: any, password: any){
+      const headers = new HttpHeaders();
+      headers.set('username', username);
         const body = {
             username,
             password
         }
-        return this.http.post(this.url, body, {observe: 'response'})
+        return this.http.post(this.url, body, {observe: 'response', headers: headers})
     }
 
     // public getName(id: any){
