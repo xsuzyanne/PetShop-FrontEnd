@@ -3,6 +3,46 @@
 
 <app-navigation-toolbar></app-navigation-toolbar>
 
+<mat-grid-list cols="5" rowHeight="100px">
+  <mat-grid-tile>
+    <mat-card class="dashboard-class">
+      <mat-card-header>
+        <a href="">
+          <mat-icon class="material-icons">local_shipping</mat-icon>
+          <strong>Frete Grátis Nordeste</strong>
+        </a>
+      </mat-card-header>
+    </mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <mat-card class="dashboard-class">
+      <mat-card-header>
+        <a href="">
+          <mat-icon class="material-icons">shower</mat-icon>
+          <strong>Banho e Tosa</strong>
+        </a>
+      </mat-card-header>
+    </mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile>
+  <mat-card class="dashboard-class">
+    <mat-card-header>
+      <a href="">
+        <mat-icon class="material-icons">credit_card</mat-icon>
+        <strong>Até 3x sem juros</strong>
+      </a>
+    </mat-card-header>
+  </mat-card></mat-grid-tile>
+  <mat-grid-tile>
+  <mat-card class="dashboard-class">
+    <mat-card-header>
+      <a href="">
+        <mat-icon class="material-icons">store_mall_directory</mat-icon>
+        <strong>Retire e Troque na loja</strong>
+      </a>
+    </mat-card-header>
+  </mat-card></mat-grid-tile>
+</mat-grid-list>
 <mat-paginator [length]="100"
               [pageSize]="10"
               [pageSizeOptions]="[5, 10, 25, 100]"
