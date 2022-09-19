@@ -3,7 +3,6 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 import { LoginService } from '../services/login.service';
 import { CookieService } from '../services/cookie.service';
 import { Router } from '@angular/router';
-import { NavigationToolbarComponent } from '../navigation-toolbar/navigation-toolbar.component';
 
 
 @Component({
@@ -28,27 +27,39 @@ export class LoginComponent implements OnInit {
     private loginService: LoginService,
     public cookie: CookieService,
     private router: Router,
-    private nav : NavigationToolbarComponent
+    // private nav : NavigationToolbarComponent
     ) { }
 
   ngOnInit(): void {  }
 
-  onSucessLogin(user: any){
-    console.log(">>>> usuário autenticado com sucesso")
-    console.log(user)    
+  onSucessLogin(user: any){ 
     this.cookie.setCookie({
-      name: 'userid',
+      name: 'id',
       value: user.id,
       session: true,
     });
-    this.router.navigate(['']).then( () => {
-      this.nav.ngOnInit();
+    this.cookie.setCookie({
+      name: 'username',
+      value: user.username,
+      session: true,
     });
+    this.cookie.setCookie({
+      name: 'name',
+      value: user.name,
+      session: true,
+    });
+    this.cookie.setCookie({
+      name: 'tipo',
+      value: user.tipo,
+      session: true,
+    });
+    this.router.navigate(['']);
     
   }
   onErrorLogin(message: any){
     console.log(message);
     this.message = message;
+    
   }
 
   onLogin(){

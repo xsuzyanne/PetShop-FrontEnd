@@ -6,7 +6,10 @@
   <span>PetShop Code</span>
   <span class="example-spacer"></span>
   <div *ngIf="this.usuarioName">
-    <p> Olá, {{this.usuarioName}}</p>
+    <p> Olá, {{this.usuarioName}} <button (click)="logOff()" mat-button color="warn" class="example-button-row">
+      Sair
+    </button></p>
+     
   </div>
   <div *ngIf="!this.usuarioName">
    <button mat-raised-button class="example-button-row">

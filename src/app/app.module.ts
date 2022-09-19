@@ -37,6 +37,7 @@ import { CartComponent } from './cart/cart.component';
 
 import { ProductService } from './services/product.service';
 import { CookieService } from './services/cookie.service';
+import { LoginService } from './services/login.service';
 
 @NgModule({
   declarations: [
@@ -76,7 +77,7 @@ import { CookieService } from './services/cookie.service';
     MatExpansionModule,
     MatChipsModule
   ],
-  providers: [ProductService, CookieService],
+  providers: [ProductService, CookieService, LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

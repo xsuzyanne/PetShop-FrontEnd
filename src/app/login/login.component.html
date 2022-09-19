@@ -29,6 +29,7 @@
 </div>
 <button type="submit" mat-flat-button color="primary">Entrar</button>
 </form>
+  <h4 *ngIf="message" style="color: red;">{{message}}</h4>
 </mat-card>
 <h5>OU</h5>
 <h4>Novo no PetShopCode? <a [routerLink]="'/cadastro'">Crie sua conta</a></h4>
