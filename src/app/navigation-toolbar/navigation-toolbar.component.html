@@ -5,9 +5,18 @@
   </button>
   <span>PetShop Code</span>
   <span class="example-spacer"></span>
-  <button mat-raised-button class="example-button-row">
+  <div *ngIf="this.usuarioName">
+    <p> Olá, {{this.usuarioName}} <button (click)="logOff()" mat-button color="warn" class="example-button-row">
+      Sair
+    </button></p>
+     
+  </div>
+  <div *ngIf="!this.usuarioName">
+   <button mat-raised-button class="example-button-row">
     <a [routerLink]="'/login'" ><mat-icon class="material-symbols-outlined">person</mat-icon>Entre  ou cadastre-se</a>
-  </button>
+  </button> 
+  </div>
+  
   <!-- <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
     <mat-icon>favorite</mat-icon>
   </button> -->

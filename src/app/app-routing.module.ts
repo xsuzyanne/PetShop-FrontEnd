@@ -9,7 +9,8 @@ import { UserRegistrationComponent } from './user-registration/user-registration
 import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
-  { path: '', component: ProductListComponent },
+  { path: '', redirectTo: 'products', pathMatch: 'full' },
+  { path: 'products', component: ProductListComponent },
   { path: 'products/:productId', component: ProductDetailsComponent },
   { path: 'compartilhar', component: ShipAddressComponent },
   { path: 'login', component: LoginComponent },

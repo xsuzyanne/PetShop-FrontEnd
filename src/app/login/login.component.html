@@ -8,36 +8,32 @@
     </button>
   </div>
   <h3>Acesse sua Conta</h3>
+<mat-card>
 <h4>Informe seu usuário e senha de cadastro</h4>
+<form [formGroup]="loginForm" (ngSubmit)="onLogin()">
 <div>
-  <mat-form-field color="Primary" appearance="fill">
-    <mat-label>Tipo de Usuário</mat-label>
-    <mat-select>
-      <mat-option value="cliente">Cliente</mat-option>
-      <mat-option value="administrador">Administrador</mat-option>
-    </mat-select>
-    <mat-hint align="end">Here's the dropdown arrow ^</mat-hint>
-  </mat-form-field>
-</div>
-<div>
-  <mat-form-field hintLabel="Max 10 characters" appearance="fill">
-    <mat-label>Enter some input</mat-label>
-    <input matInput #input maxlength="10" placeholder="Usuário">
+  <mat-form-field appearance="fill">
+    <mat-label>Insira o seu e-mail de acesso</mat-label>
+    <input matInput #input maxlength="40" placeholder="Usuário" formControlName="username" type="email">
     <mat-hint align="end">{{input.value.length || 0}}/10</mat-hint>
   </mat-form-field>
 </div>
 <div>
 <mat-form-field appearance="fill">
-  <mat-label>Enter your password</mat-label>
-  <input matInput [type]="hide ? 'password' : 'text'">
+  <mat-label>Insira a sua senha</mat-label>
+  <input matInput formControlName="password" [type]="hide ? 'password' : 'text'">
   <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
     <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
   </button>
 </mat-form-field>
 </div>
+<button type="submit" mat-flat-button color="primary">Entrar</button>
+</form>
+  <h4 *ngIf="message" style="color: red;">{{message}}</h4>
+</mat-card>
 <h5>OU</h5>
 <h4>Novo no PetShopCode? <a [routerLink]="'/cadastro'">Crie sua conta</a></h4>
 
 
 
-<button><a [routerLink]="''">Home</a></button>
+<button><a [routerLink]="['/products']">Voltar</a></button>

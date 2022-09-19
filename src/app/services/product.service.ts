@@ -18,26 +18,10 @@ export class ProductService {
     return this.http.get<Product[]>(this.url+'/api/Products')
   }
 
+  public getById(id: any): Observable<Product>{
+    return this.http.get<Product>(this.url+'/api/Products/'+id)
+  }
+
 
 }
 
-// import { Injectable } from '@angular/core';
-// import { HttpClient } from '@angular/common/http';
-
-// @Injectable({
-//   providedIn: 'root'
-// })
-// export class ProductService {
-
-//   url = 'http://localhost:5000/';
-//   constructor(private http: HttpClient) { }
-
-//  renderProducts = (data: any) => { 
-//     return data;   
-//   }
-//     getProducts(){
-//         return this
-//             .http
-//             .get(this.url+'/api/Products').subscribe(this.renderProducts)
-//     }
-// }
