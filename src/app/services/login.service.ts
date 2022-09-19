@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable, of } from 'rxjs';
-import { Product} from '../products';
 
 @Injectable({
     providedIn: 'root',
@@ -12,9 +10,9 @@ import { Product} from '../products';
     constructor(
         private http: HttpClient
       ) { }
-      
 
-    public Authenticate(username: any, password: any){        
+
+    public Authenticate(username: any, password: any){
         const body = {
             username,
             password

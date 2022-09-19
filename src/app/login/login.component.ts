@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import { LoginService } from '../services/login.service';
+import { CookieService } from '../services/cookie.service';
 
 @Component({
   selector: 'app-login',
@@ -20,12 +21,25 @@ export class LoginComponent implements OnInit {
 
   hide = true;
 
-  constructor(private loginService: LoginService) { }
+  constructor(
+    private loginService: LoginService,
+    public cookie: CookieService
+    ) { }
 
   ngOnInit(): void {  }
 
-  onSucessLogin(){
+  onSucessLogin(user: any){
     console.log(">>>> usuário autenticado com sucesso")
+    this.cookie.setCookie({
+      name: 'username',
+      value: user,
+      session: true,
+    });
+    this.cookie.setCookie({
+      name: 'tipo',
+      value: user,
+      session: true,
+    });
   }
   onErrorLogin(message: any){
     this.message = message;
@@ -34,8 +48,8 @@ export class LoginComponent implements OnInit {
   onLogin(){
     const username: string = this.loginForm.value.username || "";
     const password: string = this.loginForm.value.password || "";
-    this.loginService.Authenticate(username, password).subscribe(() => {
-      this.onSucessLogin()
+    this.loginService.Authenticate(username, password).subscribe((res) => {
+      this.onSucessLogin(username)
     },(res) => {
       this.onErrorLogin(res.error.message)
     })
