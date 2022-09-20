@@ -21,7 +21,8 @@ import { MatStepperModule } from '@angular/material/stepper'
 import { MatSliderModule } from '@angular/material/slider';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { HttpClientModule } from '@angular/common/http';
-import { MatChipsModule } from '@angular/material/chips'
+import { MatChipsModule } from '@angular/material/chips';
+import { MatTabsModule } from '@angular/material/tabs'
 
 
 
@@ -82,7 +83,8 @@ import { EditUsersComponent } from './edit-users/edit-users.component';
     MatStepperModule,
     MatSliderModule,
     MatExpansionModule,
-    MatChipsModule
+    MatChipsModule,
+    MatTabsModule
   ],
   providers: [ProductService, CookieService, LoginService],
   bootstrap: [AppComponent]
