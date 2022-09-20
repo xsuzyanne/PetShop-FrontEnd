@@ -1,39 +1,35 @@
 <mat-toolbar>
-  <img src="..\assets\PetShopLogoP.png" alt="Logo de Cachorro Laranja com teclado de computador">
-  <span>PetShop Code</span>
+  <a class="link-toolbar" [routerLink]="['/products']"><span class="material-icons">home</span>
+  <span>PetShop Code</span></a>
+  <span class="example-spacer"></span>
+  <span class="material-icons">lock</span>
+  <span>Ambiente Seguro</span>
 </mat-toolbar>
-<div class="example-button-container">
-    <button mat-fab aria-label="Icon button with a person icon">
-    <mat-icon>person</mat-icon>
-    </button>
-  </div>
-  <h3>Acesse sua Conta</h3>
+
 <mat-card>
-<h4>Informe seu usuário e senha de cadastro</h4>
-<form [formGroup]="loginForm" (ngSubmit)="onLogin()">
-<div>
-  <mat-form-field appearance="fill">
-    <mat-label>Insira o seu e-mail de acesso</mat-label>
-    <input matInput #input maxlength="40" placeholder="Usuário" formControlName="username" type="email">
-    <mat-hint align="end">{{input.value.length || 0}}/10</mat-hint>
-  </mat-form-field>
-</div>
-<div>
-<mat-form-field appearance="fill">
-  <mat-label>Insira a sua senha</mat-label>
-  <input matInput formControlName="password" [type]="hide ? 'password' : 'text'">
-  <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-  </button>
-</mat-form-field>
-</div>
-<button type="submit" mat-flat-button color="primary">Entrar</button>
-</form>
+  <img src="..\assets\PetShopLogoP.png" alt="Logo de Cachorro Laranja com teclado de computador">
+  <h2><strong>Acesse sua Conta</strong></h2>
+  <h4>Informe seu usuário e senha de cadastro</h4>
+  <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label>Insira o seu e-mail de acesso</mat-label>
+        <input matInput #input maxlength="40" placeholder="Usuário" formControlName="username" type="email">
+        <mat-hint align="end">{{input.value.length || 0}}/10</mat-hint>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label>Insira a sua senha</mat-label>
+        <input matInput formControlName="password" [type]="hide ? 'password' : 'text'">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+    <button type="submit" mat-flat-button>Entrar</button>
+  </form>
   <h4 *ngIf="message" style="color: red;">{{message}}</h4>
 </mat-card>
-<h5>OU</h5>
-<h4>Novo no PetShopCode? <a [routerLink]="'/cadastro'">Crie sua conta</a></h4>
-
-
-
-<button><a [routerLink]="['/products']">Voltar</a></button>
+<h3>Novo no PetShopCode? <a [routerLink]="'/cadastro'">Crie sua conta</a></h3>
+<h5>  Ao acessar, você está de acordo com os <i>Termos de Uso e Política de Privacidade</i></h5>

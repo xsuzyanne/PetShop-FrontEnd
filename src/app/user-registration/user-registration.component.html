@@ -1,11 +1,13 @@
-<!-- <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
-  {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
-</button> -->
-
 <mat-toolbar>
-  <img src="..\assets\PetShopLogoP.png" alt="Logo de Cachorro Laranja com teclado de computador">
-  <span>PetShop Code</span>
+  <a class="link-toolbar" [routerLink]="['/products']">
+    <img src="..\assets\PetShopLogoP.png" alt="Logo de Cachorro Laranja com teclado de computador">
+  </a>
+  <span class="example-spacer"></span>
+  <span class="material-icons">lock</span>
+  <h3>Ambiente Seguro</h3>
 </mat-toolbar>
+
+<mat-card>
 <mat-stepper [linear]="isLinear" #stepper>
   <mat-step [stepControl]="firstFormGroup">
     <form [formGroup]="firstFormGroup">
@@ -41,4 +43,4 @@
     </div>
   </mat-step>
 </mat-stepper>
-
+</mat-card>
