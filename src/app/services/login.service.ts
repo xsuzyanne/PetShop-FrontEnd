@@ -39,6 +39,9 @@ import { Usuario } from '../usuario';
       // 0 cliente
       // 1 admin
     }
+    public getUsername(){
+      return this.cookie.getCookie('username');
+    }
 
     public logOff(){
       this.cookie.deleteCookie('id')

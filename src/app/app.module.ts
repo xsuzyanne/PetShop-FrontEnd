@@ -39,6 +39,8 @@ import { ProductService } from './services/product.service';
 import { CookieService } from './services/cookie.service';
 import { LoginService } from './services/login.service';
 
+import { InterceptorModule } from './interceptors/interceptor.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,6 +57,7 @@ import { LoginService } from './services/login.service';
     BrowserModule,
     ReactiveFormsModule,
     HttpClientModule,
+    InterceptorModule,
     RouterModule,
     AppRoutingModule,
     BrowserAnimationsModule,
