@@ -11,6 +11,20 @@
   text-align: right;
 }
 
+.link-toolbar {
+  color: white;
+  text-decoration: none;
+  margin: 10px;
+}
+
+.mat-card {
+  text-align: center;
+  margin: 40px;
+  background-color: #4E0D3A;
+  padding: 40px;
+  box-shadow: 10px 10px 5px -1px #0003, 0 6px 10px #00000024, 0 1px 18px #0000001f;
+}
+
 input.example-right-align::-webkit-outer-spin-button,
 input.example-right-align::-webkit-inner-spin-button {
   display: none;
@@ -21,5 +35,27 @@ input.example-right-align {
 }
 
 .mat-toolbar{
-  background-color: #4E0D3A;
+  background-color: #F9AA33;
+  box-shadow: 0 3px 5px -1px #0003, 0 6px 10px #00000024, 0 1px 18px #0000001f;
+}
+
+button {
+
+  color: #4E0D3A;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.mat-flat-button {
+  background-color: cornsilk;
+}
+
+img {
+  margin: 10px;
+}
+
+.material-icons {
+  margin: 10px;
 }
