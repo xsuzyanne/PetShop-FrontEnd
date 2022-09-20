@@ -40,6 +40,8 @@ import { CookieService } from './services/cookie.service';
 import { LoginService } from './services/login.service';
 
 import { InterceptorModule } from './interceptors/interceptor.module';
+import { ProductEditDetailsComponent } from './product-edit-details/product-edit-details.component';
+import { EditUsersComponent } from './edit-users/edit-users.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +54,8 @@ import { InterceptorModule } from './interceptors/interceptor.module';
     LoginComponent,
     UserRegistrationComponent,
     CartComponent,
+    ProductEditDetailsComponent,
+    EditUsersComponent,
   ],
   imports: [
     BrowserModule,

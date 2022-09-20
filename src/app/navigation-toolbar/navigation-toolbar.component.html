@@ -1,33 +1,36 @@
-  <mat-toolbar>
+<mat-toolbar>
   <img src="..\assets\PetShopLogoP.png" alt="Logo de Cachorro Laranja com teclado de computador">
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+  <span>PetShop Code</span>
+  <button mat-icon-button class="example-icon" [matMenuTriggerFor]="menu" aria-label="Example icon-button with menu icon">
     <mat-icon>menu</mat-icon>
   </button>
-  <span>PetShop Code</span>
+  <mat-menu #menu="matMenu" xPosition="after">
+    <button mat-menu-item>Adicionar Produtos</button>
+    <button mat-menu-item>Gerenciar Usuários</button>
+  </mat-menu>
   <span class="example-spacer"></span>
   <div *ngIf="this.usuarioName">
     <p> Olá, {{this.usuarioName}} <button (click)="logOff()" mat-button color="warn" class="example-button-row">
-      Sair
-    </button></p>
-     
+      Sair</button>
+    </p>
   </div>
   <div *ngIf="!this.usuarioName">
-   <button mat-raised-button class="example-button-row">
-    <a [routerLink]="'/login'" ><mat-icon class="material-symbols-outlined">person</mat-icon>Entre  ou cadastre-se</a>
-  </button> 
+    <button mat-raised-button class="example-button-row">
+      <a [routerLink]="'/login'" class="link-toolbar"><mat-icon class="material-symbols-outlined">person</mat-icon><span>Entre  ou cadastre-se</span></a>
+    </button>
   </div>
-  
+  <button mat-icon-button class="example-icon" >
+  <a routerLink="/cart"><mat-icon>shopping_cart</mat-icon></a>
+  </button>
+</mat-toolbar>
+
+
   <!-- <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
     <mat-icon>favorite</mat-icon>
   </button> -->
   <!-- <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
    <a [routerLink]="'/compartilhar'"><mat-icon>share</mat-icon></a>
   </button> -->
-  <button mat-icon-button class="example-icon" >
-  <a routerLink="/cart"><mat-icon>shopping_basket</mat-icon></a>
-  </button>
-
-</mat-toolbar>
 
    <!-- <mat-sidenav-container class="sidenav-container">
  <mat-sidenav #drawer class="sidenav" fixedInViewport

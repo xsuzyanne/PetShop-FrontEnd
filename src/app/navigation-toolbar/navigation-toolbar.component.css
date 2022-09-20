@@ -32,3 +32,20 @@ a {
   color: white;
 }
 
+.link-toolbar {
+  text-align: center;
+  text-decoration: none;
+  color: #344955;
+}
+
+.example-button-row {
+  background-color: white;
+}
+
+.material-symbols-outlined {
+  padding-top: 5px;
+  padding-right: 10px;
+}
+
+
+

@@ -9,14 +9,29 @@
   }
 
   a {
-    color: white;
-    font-style: none;
+    color: #4E0D3A;
+    text-decoration: none;
+    margin-left: 0px;
   }
 
-  .dashboard-card {
-    background-color: #344955 ;
+  .mat-card {
+    background-color: white;
+    margin-left: 0px;
+    box-shadow: 10px 10px 5px -1px #0003, 0 6px 10px #00000024, 0 1px 18px #0000001f;
   }
 
   .visibility{
     visibility: hidden;
   }
+
+  .material-icons {
+    padding-right: 10px;
+    color: #4E0D3A;
+  }
+
+  footer {
+    background-color: #360528;
+    padding: 70px;
+  }
+
+

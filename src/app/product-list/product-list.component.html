@@ -1,54 +1,45 @@
-<body>
-
-
 <app-navigation-toolbar></app-navigation-toolbar>
+
+<p>PetShop Code já! Compre e receba EM HORAS com Frete Grátis*</p>
 
 <mat-grid-list cols="4" rowHeight="100px">
   <mat-grid-tile>
     <mat-card class="dashboard-class">
-      <mat-card-header>
-        <a href="">
-          <mat-icon class="material-icons">local_shipping</mat-icon>
-          <strong>Frete Grátis Nordeste</strong>
-        </a>
-      </mat-card-header>
+      <a href="">
+        <mat-icon class="material-icons">local_shipping</mat-icon>
+        <strong>Frete Grátis Nordeste</strong>
+      </a>
     </mat-card>
   </mat-grid-tile>
   <mat-grid-tile>
-    <mat-card class="dashboard-class">
-      <mat-card-header>
-        <a href="">
-          <mat-icon class="material-icons">shower</mat-icon>
-          <strong>Banho e Tosa</strong>
-        </a>
-      </mat-card-header>
+    <mat-card class="dashboard-class-visual">
+      <a href="">
+        <mat-icon class="material-icons">shower</mat-icon>
+        <strong>Banho e Tosa</strong>
+      </a>
     </mat-card>
   </mat-grid-tile>
   <mat-grid-tile>
   <mat-card class="dashboard-class">
-    <mat-card-header>
-      <a href="">
-        <mat-icon class="material-icons">credit_card</mat-icon>
-        <strong>Até 3x sem juros</strong>
-      </a>
-    </mat-card-header>
+    <a href="">
+      <mat-icon class="material-icons">credit_card</mat-icon>
+      <strong>Até 3x sem juros</strong>
+    </a>
   </mat-card></mat-grid-tile>
   <mat-grid-tile>
   <mat-card class="dashboard-class">
-    <mat-card-header>
-      <a href="">
-        <mat-icon class="material-icons">store_mall_directory</mat-icon>
-        <strong>Retire e Troque na loja</strong>
-      </a>
-    </mat-card-header>
+    <a href="">
+      <mat-icon class="material-icons">store_mall_directory</mat-icon>
+      <strong>Retire e Troque na loja</strong>
+    </a>
   </mat-card></mat-grid-tile>
 </mat-grid-list>
+
 <mat-paginator [length]="100"
               [pageSize]="10"
               [pageSizeOptions]="[5, 10, 25, 100]"
               aria-label="Select page">
 </mat-paginator>
-
 
 <mat-grid-list cols="5" rowHeight="450px">
   <mat-grid-tile *ngFor="let product of products" >
@@ -69,13 +60,68 @@
           </button>
         </div>
           <mat-menu #menu="matMenu" xPosition="before">
-            <button mat-menu-item>Editar</button>
+            <button mat-menu-item [routerLink]="['/products/edit', product.id]">Editar</button>
             <button mat-menu-item>Remove</button>
           </mat-menu>
       </mat-card-header>
       <img mat-card-image [src]="product.url_image">
-      <button type="button" (click)="addToCart(product)">Adicionar ao carrinho</button>
+      <span class="material-icons" (click)="addToCart(product)">
+        add_shopping_cart
+      </span>
     </mat-card>
   </mat-grid-tile>
 </mat-grid-list>
-</body>
+<div>
+<p>Conheça os melhores serviços pet</p>
+<mat-grid-list cols="7" rowHeight="100px">
+  <mat-grid-tile color="primary">
+    <mat-card>
+        <p>Banho & Tosa</p>
+    </mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <mat-card color="primary" class="dashboard-class-visual">
+        <p >Pet Sitter</p>
+    </mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile>
+  <mat-card color="primary"class="dashboard-class">
+      <p>Hospedagem Pet</p>
+  </mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile>
+  <mat-card color="primary" class="dashboard-class">
+      <strong >Dog Walker</strong>
+  </mat-card>
+</mat-grid-tile>
+<mat-grid-tile>
+  <mat-card color="primary" class="dashboard-class">
+      <strong >Creche Pet</strong>
+  </mat-card>
+</mat-grid-tile>
+<mat-grid-tile>
+  <mat-card color="primary" class="dashboard-class">
+      <strong >Adestramento de Cães</strong>
+  </mat-card>
+</mat-grid-tile>
+<mat-grid-tile>
+  <mat-card color="primary" class="dashboard-class">
+      <strong >Veterinário</strong>
+  </mat-card>
+</mat-grid-tile>
+</mat-grid-list>
+</div>
+
+<div>
+  <mat-card>
+<h1>Receba Nossa newsletter</h1>
+  <h5>Fique por dentro das promoções exclusivas, dicas e descontos da Petshop Code.</h5>
+  </mat-card>
+</div>
+
+<div>
+  <h3>Encontre a loja mais próxima de você</h3>
+</div>
+
+<footer>
+</footer>
