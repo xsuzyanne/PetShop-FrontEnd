@@ -27,11 +27,11 @@ export class ProductService {
   }
 
   public update(product: Product){
-    return this.http.put(this.url+'/api/Products'+product.id, product)
+    return this.http.put(this.url+'/api/Products/'+product.id, product)
   }
 
   public delete(id: any){
-    return this.http.delete(this.url+'/api/Products'+id)
+    return this.http.delete(this.url+'/api/Products/'+id)
   }
 
 

@@ -26,6 +26,8 @@ import { MatTabsModule } from '@angular/material/tabs'
 
 
 
+
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavigationToolbarComponent } from './navigation-toolbar/navigation-toolbar.component';
@@ -43,6 +45,7 @@ import { LoginService } from './services/login.service';
 import { InterceptorModule } from './interceptors/interceptor.module';
 import { ProductEditDetailsComponent } from './product-edit-details/product-edit-details.component';
 import { EditUsersComponent } from './edit-users/edit-users.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -84,7 +87,8 @@ import { EditUsersComponent } from './edit-users/edit-users.component';
     MatSliderModule,
     MatExpansionModule,
     MatChipsModule,
-    MatTabsModule
+    MatTabsModule,
+    MatSnackBarModule
   ],
   providers: [ProductService, CookieService, LoginService],
   bootstrap: [AppComponent]

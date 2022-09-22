@@ -4,7 +4,6 @@ import { LoginService } from '../services/login.service';
 import { CookieService } from '../services/cookie.service';
 import { Router } from '@angular/router';
 
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -26,8 +25,7 @@ export class LoginComponent implements OnInit {
   constructor(
     private loginService: LoginService,
     public cookie: CookieService,
-    private router: Router,
-    // private nav : NavigationToolbarComponent
+    private router: Router
     ) { }
 
   ngOnInit(): void {  }
@@ -54,10 +52,10 @@ export class LoginComponent implements OnInit {
       session: true,
     });
     this.router.navigate(['']);
+
     
   }
-  onErrorLogin(message: any){
-    console.log(message);
+  onErrorLogin(message: any){    
     this.message = message;
     
   }
@@ -65,10 +63,9 @@ export class LoginComponent implements OnInit {
   onLogin(){
     const username: string = this.loginForm.value.username || "";
     const password: string = this.loginForm.value.password || "";
-    this.loginService.Authenticate(username, password).subscribe((res) => {
-      this.onSucessLogin(res.body)
-    },(res) => {
-      this.onErrorLogin(res.error.message)
+    this.loginService.Authenticate(username, password).subscribe({
+      next: (res) => this.onSucessLogin(res.body),
+      error: (res) => this.onErrorLogin(res.error.message)
     })
   }
 
