@@ -5,7 +5,7 @@ import { Product } from '../products';
 import { CartService } from '../services/cart.service';
 import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 import { map } from 'rxjs/operators';
-
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-product-list',
@@ -22,7 +22,8 @@ export class ProductListComponent implements OnInit {
     private productService: ProductService,
     private cartService: CartService,
     private breakpointObserver: BreakpointObserver,
-    private loginService: LoginService) {
+    private loginService: LoginService,
+    private _snackBar: MatSnackBar) {
   }
 
   addToCart(product: Product) {
@@ -60,6 +61,20 @@ export class ProductListComponent implements OnInit {
     });
   }
 
+  openSnackBar(message: string, action: string) {
+    this._snackBar.open(message, action);
+  }
+
+  deleteProduct(id: any){  
+    this.productService.delete(id).subscribe({
+      next: () => {
+        this.ngOnInit();
+        this._snackBar.open('Removido com sucesso', 'Ok', {duration: 3000})        
+      },
+      error: () => this._snackBar.open('Erro ao remover produto', 'Ok'),
+    })
+  }
+
   ngOnInit(): void {
     this.getProducts();
     if(this.loginService.getTipo() == '1'){
@@ -69,5 +84,5 @@ export class ProductListComponent implements OnInit {
     }
 
   }
-
 }
+
