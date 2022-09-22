@@ -1,9 +1,13 @@
 <app-navigation-toolbar></app-navigation-toolbar>
 
-<p>PetShop Code já! Compre e receba EM HORAS com Frete Grátis*</p>
+<mat-toolbar>
+PetShop Code já! Compre e receba EM HORAS com Frete Grátis*
+</mat-toolbar>
 
 <mat-tab-group>
-  <mat-tab label="First"> <img src="" alt=""></mat-tab>
+  <mat-tab label="Adote um gatinho!">
+    <mat-card><img matCardImage class="carousel" src="../../assets/adotegato.png"></mat-card>
+  </mat-tab>
   <mat-tab label="Second"> Content 2 </mat-tab>
   <mat-tab label="Third"> Content 3 </mat-tab>
 </mat-tab-group>
@@ -78,43 +82,76 @@
   </mat-grid-tile>
 </mat-grid-list>
 <div>
+
 <p>Conheça os melhores serviços pet</p>
-<mat-grid-list cols="7" rowHeight="100px">
-  <mat-grid-tile color="primary">
-    <mat-card>
-        <p>Banho & Tosa</p>
+
+<mat-grid-list cols="6" rowHeight="300px">
+  <mat-grid-tile>
+    <mat-card class="cardServicos">
+      <mat-card-header>
+        <mat-card-title>Banho & Tosa</mat-card-title>
+      </mat-card-header>
+      <img matCardImage src="../../assets/adotegato.png">
+      <mat-card-content>
+        Text content
+      </mat-card-content>
     </mat-card>
   </mat-grid-tile>
   <mat-grid-tile>
-    <mat-card color="primary" class="dashboard-class-visual">
-        <p >Pet Sitter</p>
+    <mat-card class="cardServicos">
+      <mat-card-header>
+        <mat-card-title>Pet Sitter</mat-card-title>
+      </mat-card-header>
+      <img matCardImage src="../../assets/adotegato.png">
+      <mat-card-content>
+        Text content
+      </mat-card-content>
     </mat-card>
   </mat-grid-tile>
   <mat-grid-tile>
-  <mat-card color="primary"class="dashboard-class">
-      <p>Hospedagem Pet</p>
-  </mat-card>
+    <mat-card class="cardServicos">
+      <mat-card-header>
+        <mat-card-title>Dog Walker</mat-card-title>
+      </mat-card-header>
+      <img matCardImage src="../../assets/adotegato.png">
+      <mat-card-content>
+        Text content
+      </mat-card-content>
+    </mat-card>
   </mat-grid-tile>
   <mat-grid-tile>
-  <mat-card color="primary" class="dashboard-class">
-      <strong >Dog Walker</strong>
-  </mat-card>
-</mat-grid-tile>
-<mat-grid-tile>
-  <mat-card color="primary" class="dashboard-class">
-      <strong >Creche Pet</strong>
-  </mat-card>
-</mat-grid-tile>
-<mat-grid-tile>
-  <mat-card color="primary" class="dashboard-class">
-      <strong >Adestramento de Cães</strong>
-  </mat-card>
-</mat-grid-tile>
-<mat-grid-tile>
-  <mat-card color="primary" class="dashboard-class">
-      <strong >Veterinário</strong>
-  </mat-card>
-</mat-grid-tile>
+    <mat-card class="cardServicos">
+      <mat-card-header>
+        <mat-card-title>Creche Pet</mat-card-title>
+      </mat-card-header>
+      <img matCardImage src="../../assets/adotegato.png">
+      <mat-card-content>
+        Text content
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <mat-card class="cardServicos">
+      <mat-card-header>
+        <mat-card-title>Adestramento de Cães</mat-card-title>
+      </mat-card-header>
+      <img matCardImage src="../../assets/adotegato.png">
+      <mat-card-content>
+        Text content
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <mat-card class="cardServicos">
+      <mat-card-header>
+        <mat-card-title>Veterinário</mat-card-title>
+      </mat-card-header>
+      <img matCardImage src="../../assets/adotegato.png">
+      <mat-card-content>
+        Text content
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
 </mat-grid-list>
 </div>
 
