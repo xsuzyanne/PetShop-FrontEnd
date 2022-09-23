@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {  }
 
-  onSucessLogin(user: any){ 
+  onSucessLogin(user: any){
     this.cookie.setCookie({
       name: 'id',
       value: user.id,
@@ -53,11 +53,11 @@ export class LoginComponent implements OnInit {
     });
     this.router.navigate(['']);
 
-    
+
   }
-  onErrorLogin(message: any){    
+  onErrorLogin(message: any){
     this.message = message;
-    
+
   }
 
   onLogin(){

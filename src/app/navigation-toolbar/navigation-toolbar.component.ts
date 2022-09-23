@@ -13,7 +13,7 @@ import { ProductListComponent } from '../product-list/product-list.component';
   styleUrls: ['./navigation-toolbar.component.css']
 })
 export class NavigationToolbarComponent implements OnInit {
-  
+
   usuarioName = '';
 
   ngOnInit(): void {
@@ -23,9 +23,13 @@ export class NavigationToolbarComponent implements OnInit {
    logOff(){
     this.loginService.logOff();
     this.router.navigate(['']).then( () => this.home.ngOnInit());
-    this.ngOnInit();    
+    this.ngOnInit();
    }
-  
+
+   newProduct(){
+    this.router.navigate(['new'])
+   }
+
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
@@ -37,7 +41,7 @@ export class NavigationToolbarComponent implements OnInit {
     private breakpointObserver: BreakpointObserver,
     public loginService: LoginService,
     private router: Router,
-    private home: ProductListComponent 
+    private home: ProductListComponent
     ) {}
 
 }
