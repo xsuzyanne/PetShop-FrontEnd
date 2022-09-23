@@ -1,33 +1,49 @@
 <mat-toolbar>
-  <a [routerLink]="''" class="link-toolbar"> <img src="..\assets\PetShopLogoP.png" alt="Logo de Cachorro Laranja com teclado de computador">
-    <span>PetShop Code</span></a>
+  <a [routerLink]="''" class="link-toolbar">
+    <img
+      src="..\assets\PetShopLogoP.png"
+      alt="Logo de Cachorro Laranja com teclado de computador"
+    />
+    <span>PetShop Code</span></a
+  >
   <span class="example-spacer"></span>
   <span>Olá, Administrador!</span>
 </mat-toolbar>
 
 <mat-card>
-<h2>Editar Produto</h2>
+  <h2>Editar Produto</h2>
 
-<div *ngIf="product">
-  <form [formGroup]="updateProductForm">
-    <div>
-      <mat-form-field appearance="fill">
-        <mat-label>Nome:</mat-label>
-        <input [(ngModel)]="product.name" matInput formControlName="name">
-      </mat-form-field>
-    </div>
-    <div>
-      <mat-form-field appearance="fill">
-        <mat-label>Descrição:</mat-label>
-        <textarea [(ngModel)]="product.description" matInput formControlName="description"></textarea>
-      </mat-form-field>
-    </div>
-    <div>
-      <mat-form-field appearance="fill">
-        <mat-label>URL Imagem:</mat-label>
-        <input [(ngModel)]="product.url_image" matInput formControlName="url_image" type="url" value="{{ product.url_image}}">
-      </mat-form-field>
-    </div>
-  </form>
-</div>
+  <div *ngIf="product">
+    <form [formGroup]="updateProductForm" (ngSubmit)="onUpdate()">
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Nome:</mat-label>
+          <input [(ngModel)]="product.name" matInput formControlName="name" />
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Descrição:</mat-label>
+          <textarea
+            [(ngModel)]="product.description"
+            matInput
+            formControlName="description"
+          ></textarea>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>URL Imagem:</mat-label>
+          <input
+            [(ngModel)]="product.url_image"
+            matInput
+            formControlName="url_image"
+            type="url"
+            value="{{ product.url_image }}"
+          />
+        </mat-form-field>
+      </div>
+      <button type="submit" mat-flat-button>Salvar</button>
+    </form>
+  </div>
 </mat-card>
