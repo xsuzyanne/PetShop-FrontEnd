@@ -57,18 +57,19 @@ a {
 
 }
 
-  .visibility{
-    visibility: hidden;
-  }
+.visibility{
+  visibility: hidden;
+}
 
-  .material-icons {
-    padding-right: 10px;
-    color: #4E0D3A;
-  }
+.material-icons {
+  padding-right: 10px;
+  color: #4E0D3A;
+}
 
-  footer {
-    background-color: #360528;
-    padding: 70px;
-  }
+
+footer {
+  background-color: #360528;
+  padding: 70px;
+}
 
 

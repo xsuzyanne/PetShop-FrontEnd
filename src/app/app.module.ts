@@ -1,5 +1,4 @@
 import { RouterModule, Routes } from '@angular/router';
-import { LayoutModule } from '@angular/cdk/layout';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
@@ -22,7 +21,8 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { HttpClientModule } from '@angular/common/http';
 import { MatChipsModule } from '@angular/material/chips';
-import { MatTabsModule } from '@angular/material/tabs'
+import { MatTabsModule } from '@angular/material/tabs';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 
@@ -72,11 +72,11 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     RouterModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    LayoutModule,
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
+    FlexLayoutModule,
     MatListModule,
     MatInputModule,
     MatSelectModule,
@@ -91,7 +91,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatExpansionModule,
     MatChipsModule,
     MatTabsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
   ],
   providers: [ProductService, CookieService, LoginService],
   bootstrap: [AppComponent]

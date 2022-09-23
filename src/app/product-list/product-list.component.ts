@@ -6,6 +6,8 @@ import { CartService } from '../services/cart.service';
 import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 import { map } from 'rxjs/operators';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import { BreakPoint } from '@angular/flex-layout';
+import { from } from 'rxjs';
 
 @Component({
   selector: 'app-product-list',
@@ -37,10 +39,12 @@ export class ProductListComponent implements OnInit {
     map(({ matches }) => {
       if (matches) {
         return [
-          { title: 'Card 1', cols: 1, rows: 1 },
-          { title: 'Card 2', cols: 1, rows: 1 },
-          { title: 'Card 3', cols: 1, rows: 1 },
-          { title: 'Card 4', cols: 1, rows: 1 }
+          { title: 'product 1', cols: 3, rows: 1 },
+          { title: 'Card 2', cols: 2, rows: 2 },
+          { title: 'Card 3', cols: 2, rows: 2 },
+          { title: 'Card 4', cols: 2, rows: 2 },
+          { title: 'Card 5', cols: 2, rows: 2 }
+
         ];
       }
 
@@ -48,7 +52,8 @@ export class ProductListComponent implements OnInit {
         { title: 'Card 1', cols: 1, rows: 1 },
         { title: 'Card 2', cols: 1, rows: 1 },
         { title: 'Card 3', cols: 1, rows: 1 },
-        { title: 'Card 4', cols: 1, rows: 1 }
+        { title: 'Card 4', cols: 1, rows: 1 },
+        { title: 'Card 5', cols: 1, rows: 2 }
       ];
     })
   );

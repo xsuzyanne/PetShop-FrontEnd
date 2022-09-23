@@ -1,21 +1,26 @@
 <app-navigation-toolbar></app-navigation-toolbar>
 
 <mat-toolbar>
-<<<<<<< HEAD
   <span class="example-spacer"></span>PetShop Code já! Compre e receba EM HORAS com Frete Grátis*
-=======
-  PetShop Code já! Compre e receba EM HORAS com Frete Grátis*
->>>>>>> 362e28f7e2e3b23802cbf1f865815d5a842be66a
 </mat-toolbar>
 
 <mat-tab-group>
   <mat-tab label="Adote um gatinho!">
-    <mat-card
-      ><img matCardImage class="carousel" src="../../assets/adotegato.png"
-    /></mat-card>
+    <div fxLayoutAlign="center center">
+      <img matcardImage class="carousel" src="../../assets/racao.png" alt="pote de racao">
+      <img matCardImage class="carousel" src="../../assets/AlimentaçãoPet .png" alt="Gatinho laranja falando 'sachê!' para pergunta 'qual melhor comida para seu pet'"/>
+    </div>
   </mat-tab>
-  <mat-tab label="Second"> Content 2 </mat-tab>
-  <mat-tab label="Third"> Content 3 </mat-tab>
+  <mat-tab label="Second">
+    <div fxLayoutAlign="center center">
+    <img matCardImage class="carousel" src="../../assets/adotegato.png"/>
+    </div>
+  </mat-tab>
+  <mat-tab label="Third">
+    <div fxLayoutAlign="center center">
+      <img matCardImage class="carousel" src="../../assets/adotegato.png"/>
+    </div> 
+  </mat-tab>
 </mat-tab-group>
 
 <mat-grid-list cols="4" rowHeight="100px">
@@ -41,8 +46,8 @@
         <mat-icon class="material-icons">credit_card</mat-icon>
         <strong>Até 3x sem juros</strong>
       </a>
-    </mat-card></mat-grid-tile
-  >
+    </mat-card>
+  </mat-grid-tile>
   <mat-grid-tile>
     <mat-card class="dashboard-class">
       <a href="">
@@ -63,6 +68,7 @@
 
 <mat-grid-list cols="5" rowHeight="450px">
   <mat-grid-tile *ngFor="let product of products">
+    <div style="margin: 3%;">
     <mat-card class="dashboard-card">
       <mat-card-header>
         <mat-card-title>
@@ -102,164 +108,103 @@
           </button>
         </mat-menu>
       </mat-card-header>
-<<<<<<< HEAD
        <mat-card-content><img mat-card-image [src]="product.url_image"></mat-card-content>
       <a>{{ product.price | currency: 'R$' }}</a>
       <span class="example-spacer"></span>
-      <mat-icon (click)="addToCart(product)">
-=======
-      <img mat-card-image [src]="product.url_image" />
-      <span class="material-icons" (click)="addToCart(product)">
->>>>>>> 362e28f7e2e3b23802cbf1f865815d5a842be66a
-        add_shopping_cart
-      </mat-icon>
+      <mat-icon (click)="addToCart(product)">shopping_cart</mat-icon>
     </mat-card>
+  </div>
   </mat-grid-tile>
-</mat-grid-list>
+</mat-grid-list>    
 <div>
-  <p>Conheça os melhores serviços pet</p>
 
-<<<<<<< HEAD
 <mat-toolbar class="servicos">Conheça os melhores serviços pet</mat-toolbar>
 
 <mat-grid-list cols="5" rowHeight="500px">
   <mat-grid-tile>
-    <mat-card class="cardServicos">
-      <mat-card-header>
-      </mat-card-header>
-      <img matCardImage src="../../assets/banhotosa.png">
-      <mat-card-content>
-      Banho, hidratação, tosa higiênica, tosa de cachorros de diversas raças e outros serviços feitos por profissionais parceiros especialistas no assunto.
-      </mat-card-content>
-    </mat-card>
+    <div style="margin: 3%;">
+      <mat-card class="cardServicos">
+        <mat-card-header>
+        </mat-card-header>
+        <img matCardImage src="../../assets/banhotosa.png">
+        <mat-card-content>
+        Banho, hidratação, tosa higiênica, tosa de cachorros de diversas raças e outros serviços feitos por profissionais parceiros especialistas no assunto.
+        </mat-card-content>
+      </mat-card>
+    </div>
   </mat-grid-tile>
   <mat-grid-tile>
-    <mat-card class="cardServicos">
-      <mat-card-header>
-      </mat-card-header>
-      <img matCardImage src="../../assets/run.png">
-      <mat-card-content>
-        <strong>Dog Walker </strong>Sem tempo para sair com seu cachorro? Além de caminhadas, os passeadores parceiros Pet Anjo ainda corrigem comportamentos e ensinam comandos básicos.
-      </mat-card-content>
-    </mat-card>
+    <div style="margin: 3%;">
+      <mat-card class="cardServicos"
+      fxFlex="0 1 calc(33,3% - 11px)"
+      fxFlex.lt-md="0 1 calc(50% - 11px)" 
+      fxFlex.lt-sm="100%">
+        <mat-card-header>
+        </mat-card-header>
+        <img matCardImage src="../../assets/run.png">
+        <mat-card-content>
+          <strong>Dog Walker </strong>Sem tempo para sair com seu cachorro? Além de caminhadas, os passeadores parceiros Pet Anjo ainda corrigem comportamentos e ensinam comandos básicos.
+        </mat-card-content>
+      </mat-card>
+    </div>
   </mat-grid-tile>
   <mat-grid-tile>
-    <mat-card class="cardServicos">
-      <mat-card-header>
-      </mat-card-header>
-      <img matCardImage src="../../assets/creche.png">
-      <mat-card-content>
-        <strong>Creche Pet </strong>Muito mais do que um hotel pra cachorro, a hospedagem familiar proporciona cuidados personalizados para seu pet.
-      </mat-card-content>
-    </mat-card>
+    <div style="margin: 3%;">
+      <mat-card class="cardServicos">
+        <mat-card-header>
+        </mat-card-header>
+        <img matCardImage src="../../assets/creche.png">
+        <mat-card-content>
+          <strong>Creche Pet </strong>Muito mais do que um hotel pra cachorro, a hospedagem familiar proporciona cuidados personalizados para seu pet.
+        </mat-card-content>
+      </mat-card>
+    </div>
   </mat-grid-tile>
   <mat-grid-tile>
-    <mat-card class="cardServicos">
-      <mat-card-header>
-      </mat-card-header>
-      <img matCardImage src="../../assets/adestra.png">
-      <mat-card-content>
-        <strong>Adestramento de Cães </strong>Adestradores profissionais e especialistas em ensinar seu pet por meio de comandos, atividades direcionadas, reforço positivo, recompensa e muita diversão.
-      </mat-card-content>
-    </mat-card>
+    <div style="margin: 3%;">
+      <mat-card class="cardServicos">
+        <mat-card-header>
+        </mat-card-header>
+        <img matCardImage src="../../assets/adestra.png">
+        <mat-card-content>
+          <strong>Adestramento de Cães </strong>Adestradores profissionais e especialistas em ensinar seu pet por meio de comandos, atividades direcionadas, reforço positivo, recompensa e muita diversão.
+        </mat-card-content>
+      </mat-card>
+    </div>
   </mat-grid-tile>
   <mat-grid-tile>
-    <mat-card class="cardServicos">
-      <mat-card-header>
-      </mat-card-header>
-      <img matCardImage src="../../assets/carecenter.png">
-      <mat-card-content>
-        A saúde do seu melhor amigo em boas mãos, consultas, exames e vacinas com médicos-veterinários parceiros.
-      </mat-card-content>
-    </mat-card>
+    <div style="margin: 3%;">
+      <mat-card class="cardServicos">
+        <mat-card-header>
+        </mat-card-header>
+        <img matCardImage src="../../assets/carecenter.png">
+        <mat-card-content>
+          A saúde do seu melhor amigo em boas mãos, consultas, exames e vacinas com médicos-veterinários parceiros.
+        </mat-card-content>
+      </mat-card>
+    </div>
   </mat-grid-tile>
 </mat-grid-list>
 </div>
 
 <div>
   <mat-card class="newsletter">
-<h1>Receba Nossa newsletter</h1>
-  <h5>Fique por dentro das promoções exclusivas, dicas e descontos da Petshop Code.</h5>
-  <mat-form-field appearance="fill">
-    <mat-label>Coloque seu e-mail aqui!</mat-label>
-    <input matInput>
-  </mat-form-field>
-  <mat-form-field appearance="fill">
-    <mat-label>Select</mat-label>
-    <mat-select>
-      <mat-option value="one">Notícias sobre promoções!</mat-option>
-      <mat-option value="two">Curiosidades sobre o mundo pet!</mat-option>
-    </mat-select>
-  </mat-form-field>
-  <button mat-button>Quero receber!</button>
-=======
-  <mat-grid-list cols="6" rowHeight="300px">
-    <mat-grid-tile>
-      <mat-card class="cardServicos">
-        <mat-card-header>
-          <mat-card-title>Banho & Tosa</mat-card-title>
-        </mat-card-header>
-        <img matCardImage src="../../assets/adotegato.png" />
-        <mat-card-content> Text content </mat-card-content>
-      </mat-card>
-    </mat-grid-tile>
-    <mat-grid-tile>
-      <mat-card class="cardServicos">
-        <mat-card-header>
-          <mat-card-title>Pet Sitter</mat-card-title>
-        </mat-card-header>
-        <img matCardImage src="../../assets/adotegato.png" />
-        <mat-card-content> Text content </mat-card-content>
-      </mat-card>
-    </mat-grid-tile>
-    <mat-grid-tile>
-      <mat-card class="cardServicos">
-        <mat-card-header>
-          <mat-card-title>Dog Walker</mat-card-title>
-        </mat-card-header>
-        <img matCardImage src="../../assets/adotegato.png" />
-        <mat-card-content> Text content </mat-card-content>
-      </mat-card>
-    </mat-grid-tile>
-    <mat-grid-tile>
-      <mat-card class="cardServicos">
-        <mat-card-header>
-          <mat-card-title>Creche Pet</mat-card-title>
-        </mat-card-header>
-        <img matCardImage src="../../assets/adotegato.png" />
-        <mat-card-content> Text content </mat-card-content>
-      </mat-card>
-    </mat-grid-tile>
-    <mat-grid-tile>
-      <mat-card class="cardServicos">
-        <mat-card-header>
-          <mat-card-title>Adestramento de Cães</mat-card-title>
-        </mat-card-header>
-        <img matCardImage src="../../assets/adotegato.png" />
-        <mat-card-content> Text content </mat-card-content>
-      </mat-card>
-    </mat-grid-tile>
-    <mat-grid-tile>
-      <mat-card class="cardServicos">
-        <mat-card-header>
-          <mat-card-title>Veterinário</mat-card-title>
-        </mat-card-header>
-        <img matCardImage src="../../assets/adotegato.png" />
-        <mat-card-content> Text content </mat-card-content>
-      </mat-card>
-    </mat-grid-tile>
-  </mat-grid-list>
-</div>
-
-<div>
-  <mat-card>
     <h1>Receba Nossa newsletter</h1>
-    <h5>
-      Fique por dentro das promoções exclusivas, dicas e descontos da Petshop
-      Code.
-    </h5>
->>>>>>> 362e28f7e2e3b23802cbf1f865815d5a842be66a
+    <h5>Fique por dentro das promoções exclusivas, dicas e descontos da Petshop Code.</h5>
+    <mat-form-field appearance="fill">
+      <mat-label>Coloque seu e-mail aqui!</mat-label>
+      <input matInput>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Select</mat-label>
+      <mat-select>
+        <mat-option value="one">Notícias sobre promoções!</mat-option>
+        <mat-option value="two">Curiosidades sobre o mundo pet!</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button mat-button>Quero receber!</button>
   </mat-card>
+
 <mat-toolbar>
   <span class="example-spacer"></span><a>Encontre a loja mais próxima de você</a>
 </mat-toolbar>

@@ -38,9 +38,9 @@
       >
     </button>
   </div>
-  <button mat-icon-button class="example-icon">
-    <a routerLink="/cart"><mat-icon>shopping_cart</mat-icon></a>
-  </button>
+  <a [routerLink]="'/cart'" class="example-icon">
+  <mat-icon>shopping_cart</mat-icon>
+  </a>
 </mat-toolbar>
 
 <!-- <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
