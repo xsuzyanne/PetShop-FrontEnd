@@ -1,7 +1,7 @@
 <app-navigation-toolbar></app-navigation-toolbar>
 
 <mat-toolbar>
-PetShop Code já! Compre e receba EM HORAS com Frete Grátis*
+  <span class="example-spacer"></span>PetShop Code já! Compre e receba EM HORAS com Frete Grátis*
 </mat-toolbar>
 
 <mat-tab-group>
@@ -74,81 +74,67 @@ PetShop Code já! Compre e receba EM HORAS com Frete Grátis*
             <button mat-menu-item (click)="deleteProduct(product.id)">Remove</button>
           </mat-menu>
       </mat-card-header>
-      <img mat-card-image [src]="product.url_image">
-      <span class="material-icons" (click)="addToCart(product)">
+       <mat-card-content><img mat-card-image [src]="product.url_image"></mat-card-content>
+      <a>{{ product.price | currency: 'R$' }}</a>
+      <span class="example-spacer"></span>
+      <mat-icon (click)="addToCart(product)">
         add_shopping_cart
-      </span>
+      </mat-icon>
     </mat-card>
   </mat-grid-tile>
 </mat-grid-list>
 <div>
 
-<p>Conheça os melhores serviços pet</p>
+<mat-toolbar class="servicos">Conheça os melhores serviços pet</mat-toolbar>
 
-<mat-grid-list cols="6" rowHeight="300px">
+<mat-grid-list cols="5" rowHeight="500px">
   <mat-grid-tile>
     <mat-card class="cardServicos">
       <mat-card-header>
-        <mat-card-title>Banho & Tosa</mat-card-title>
       </mat-card-header>
-      <img matCardImage src="../../assets/adotegato.png">
+      <img matCardImage src="../../assets/banhotosa.png">
       <mat-card-content>
-        Text content
+      Banho, hidratação, tosa higiênica, tosa de cachorros de diversas raças e outros serviços feitos por profissionais parceiros especialistas no assunto.
       </mat-card-content>
     </mat-card>
   </mat-grid-tile>
   <mat-grid-tile>
     <mat-card class="cardServicos">
       <mat-card-header>
-        <mat-card-title>Pet Sitter</mat-card-title>
       </mat-card-header>
-      <img matCardImage src="../../assets/adotegato.png">
+      <img matCardImage src="../../assets/run.png">
       <mat-card-content>
-        Text content
+        <strong>Dog Walker </strong>Sem tempo para sair com seu cachorro? Além de caminhadas, os passeadores parceiros Pet Anjo ainda corrigem comportamentos e ensinam comandos básicos.
       </mat-card-content>
     </mat-card>
   </mat-grid-tile>
   <mat-grid-tile>
     <mat-card class="cardServicos">
       <mat-card-header>
-        <mat-card-title>Dog Walker</mat-card-title>
       </mat-card-header>
-      <img matCardImage src="../../assets/adotegato.png">
+      <img matCardImage src="../../assets/creche.png">
       <mat-card-content>
-        Text content
+        <strong>Creche Pet </strong>Muito mais do que um hotel pra cachorro, a hospedagem familiar proporciona cuidados personalizados para seu pet.
       </mat-card-content>
     </mat-card>
   </mat-grid-tile>
   <mat-grid-tile>
     <mat-card class="cardServicos">
       <mat-card-header>
-        <mat-card-title>Creche Pet</mat-card-title>
       </mat-card-header>
-      <img matCardImage src="../../assets/adotegato.png">
+      <img matCardImage src="../../assets/adestra.png">
       <mat-card-content>
-        Text content
+        <strong>Adestramento de Cães </strong>Adestradores profissionais e especialistas em ensinar seu pet por meio de comandos, atividades direcionadas, reforço positivo, recompensa e muita diversão.
       </mat-card-content>
     </mat-card>
   </mat-grid-tile>
   <mat-grid-tile>
     <mat-card class="cardServicos">
       <mat-card-header>
-        <mat-card-title>Adestramento de Cães</mat-card-title>
       </mat-card-header>
-      <img matCardImage src="../../assets/adotegato.png">
+      <img matCardImage src="../../assets/carecenter.png">
       <mat-card-content>
-        Text content
-      </mat-card-content>
-    </mat-card>
-  </mat-grid-tile>
-  <mat-grid-tile>
-    <mat-card class="cardServicos">
-      <mat-card-header>
-        <mat-card-title>Veterinário</mat-card-title>
-      </mat-card-header>
-      <img matCardImage src="../../assets/adotegato.png">
-      <mat-card-content>
-        Text content
+        A saúde do seu melhor amigo em boas mãos, consultas, exames e vacinas com médicos-veterinários parceiros.
       </mat-card-content>
     </mat-card>
   </mat-grid-tile>
@@ -156,15 +142,25 @@ PetShop Code já! Compre e receba EM HORAS com Frete Grátis*
 </div>
 
 <div>
-  <mat-card>
+  <mat-card class="newsletter">
 <h1>Receba Nossa newsletter</h1>
   <h5>Fique por dentro das promoções exclusivas, dicas e descontos da Petshop Code.</h5>
+  <mat-form-field appearance="fill">
+    <mat-label>Coloque seu e-mail aqui!</mat-label>
+    <input matInput>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Select</mat-label>
+    <mat-select>
+      <mat-option value="one">Notícias sobre promoções!</mat-option>
+      <mat-option value="two">Curiosidades sobre o mundo pet!</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button mat-button>Quero receber!</button>
   </mat-card>
-</div>
-
-<div>
-  <h3>Encontre a loja mais próxima de você</h3>
-</div>
+<mat-toolbar>
+  <span class="example-spacer"></span><a>Encontre a loja mais próxima de você</a>
+</mat-toolbar>
 
 <footer>
 </footer>

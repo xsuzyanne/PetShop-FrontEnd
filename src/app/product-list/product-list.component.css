@@ -1,37 +1,61 @@
 .mat-paginator {
 
-  background-color: #F9AA33;
+  background-color: #f5b75a;
 
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.example-spacer.meio { 
+ flex: 1 auto 1
+}
+
+.mat-tab-label {
+  background-color: #360528;
+}
+
+.mat-card.newsletter {
+  text-align: center;
+  margin: 40px;
+  background-color: #bcd8ee;
+  box-shadow: 10px 10px 5px -1px #0003, 0 6px 10px #00000024, 0 1px 18px #0000001f;
 }
 
 .mat-toolbar {
-  background-color: #F9AA33;
+  background-color: #f5b75a;
 }
 
-  .mat-card-title {
-    font-size: smaller;
-  }
+.servicos {
+  background-color: #4E0D3A;
+  box-shadow: 0 3px 5px -1px #0003, 0 6px 10px #00000024, 0 1px 18px #0000001f;
+}
 
-  a {
-    color: #4E0D3A;
-    text-decoration: none;
-    margin-left: 0px;
-  }
+.mat-card-title {
+  font-size: smaller;
+}
 
-  .mat-card {
-    background-color: white;
-    color: #360528;
-    margin-left: 0px;
-    box-shadow: 10px 10px 5px -1px #0003, 0 6px 10px #00000024, 0 1px 18px #0000001f;
-  }
+a {
+  color: #4E0D3A;
+  text-decoration: none;
+  margin-left: 0px;
+}
 
-  .carousel {
+.mat-card {
+  background-color: white;
+  color: #360528;
+  margin-left: 0px;
+  box-shadow: 10px 10px 5px -1px #0003, 0 6px 10px #00000024, 0 1px 18px #0000001f;
+}
 
-    height: 40vh;
-    width: 40vw;
+.carousel {
+
+  height: 40vh;
+  width: 40vw;
 
 
-  }
+}
 
   .visibility{
     visibility: hidden;
