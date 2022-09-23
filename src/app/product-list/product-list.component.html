@@ -1,12 +1,18 @@
 <app-navigation-toolbar></app-navigation-toolbar>
 
 <mat-toolbar>
+<<<<<<< HEAD
   <span class="example-spacer"></span>PetShop Code já! Compre e receba EM HORAS com Frete Grátis*
+=======
+  PetShop Code já! Compre e receba EM HORAS com Frete Grátis*
+>>>>>>> 362e28f7e2e3b23802cbf1f865815d5a842be66a
 </mat-toolbar>
 
 <mat-tab-group>
   <mat-tab label="Adote um gatinho!">
-    <mat-card><img matCardImage class="carousel" src="../../assets/adotegato.png"></mat-card>
+    <mat-card
+      ><img matCardImage class="carousel" src="../../assets/adotegato.png"
+    /></mat-card>
   </mat-tab>
   <mat-tab label="Second"> Content 2 </mat-tab>
   <mat-tab label="Third"> Content 3 </mat-tab>
@@ -30,61 +36,90 @@
     </mat-card>
   </mat-grid-tile>
   <mat-grid-tile>
-  <mat-card class="dashboard-class">
-    <a href="">
-      <mat-icon class="material-icons">credit_card</mat-icon>
-      <strong>Até 3x sem juros</strong>
-    </a>
-  </mat-card></mat-grid-tile>
+    <mat-card class="dashboard-class">
+      <a href="">
+        <mat-icon class="material-icons">credit_card</mat-icon>
+        <strong>Até 3x sem juros</strong>
+      </a>
+    </mat-card></mat-grid-tile
+  >
   <mat-grid-tile>
-  <mat-card class="dashboard-class">
-    <a href="">
-      <mat-icon class="material-icons">store_mall_directory</mat-icon>
-      <strong>Retire e Troque na loja</strong>
-    </a>
-  </mat-card></mat-grid-tile>
+    <mat-card class="dashboard-class">
+      <a href="">
+        <mat-icon class="material-icons">store_mall_directory</mat-icon>
+        <strong>Retire e Troque na loja</strong>
+      </a>
+    </mat-card></mat-grid-tile
+  >
 </mat-grid-list>
 
-<mat-paginator [length]="100"
-              [pageSize]="10"
-              [pageSizeOptions]="[5, 10, 25, 100]"
-              aria-label="Select page">
+<mat-paginator
+  [length]="100"
+  [pageSize]="10"
+  [pageSizeOptions]="[5, 10, 25, 100]"
+  aria-label="Select page"
+>
 </mat-paginator>
 
 <mat-grid-list cols="5" rowHeight="450px">
-  <mat-grid-tile *ngFor="let product of products" >
+  <mat-grid-tile *ngFor="let product of products">
     <mat-card class="dashboard-card">
       <mat-card-header>
         <mat-card-title>
-          <a [title]="product.name + ' detalhes'" [routerLink]="['/products', product.id]">
-            {{ product.name }} </a>
+          <a
+            [title]="product.name + ' detalhes'"
+            [routerLink]="['/products', product.id]"
+          >
+            {{ product.name }}
+          </a>
         </mat-card-title>
-        <div *ngIf="admin" >
-          <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+        <div *ngIf="admin">
+          <button
+            mat-icon-button
+            class="more-button"
+            [matMenuTriggerFor]="menu"
+            aria-label="Toggle menu"
+          >
             <mat-icon>more_vert</mat-icon>
           </button>
         </div>
         <div *ngIf="!admin">
-          <button mat-icon-button class="more-button visibility" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+          <button
+            mat-icon-button
+            class="more-button visibility"
+            [matMenuTriggerFor]="menu"
+            aria-label="Toggle menu"
+          >
             <mat-icon>more_vert</mat-icon>
           </button>
         </div>
-          <mat-menu #menu="matMenu" xPosition="before">
-            <button mat-menu-item [routerLink]="['/products/edit', product.id]">Editar</button>
-            <button mat-menu-item (click)="deleteProduct(product.id)">Remove</button>
-          </mat-menu>
+        <mat-menu #menu="matMenu" xPosition="before">
+          <button mat-menu-item [routerLink]="['/products/edit', product.id]">
+            Editar
+          </button>
+          <button mat-menu-item (click)="deleteProduct(product.id)">
+            Remover
+          </button>
+        </mat-menu>
       </mat-card-header>
+<<<<<<< HEAD
        <mat-card-content><img mat-card-image [src]="product.url_image"></mat-card-content>
       <a>{{ product.price | currency: 'R$' }}</a>
       <span class="example-spacer"></span>
       <mat-icon (click)="addToCart(product)">
+=======
+      <img mat-card-image [src]="product.url_image" />
+      <span class="material-icons" (click)="addToCart(product)">
+>>>>>>> 362e28f7e2e3b23802cbf1f865815d5a842be66a
         add_shopping_cart
       </mat-icon>
     </mat-card>
   </mat-grid-tile>
 </mat-grid-list>
 <div>
+  <p>Conheça os melhores serviços pet</p>
 
+<<<<<<< HEAD
 <mat-toolbar class="servicos">Conheça os melhores serviços pet</mat-toolbar>
 
 <mat-grid-list cols="5" rowHeight="500px">
@@ -157,10 +192,76 @@
     </mat-select>
   </mat-form-field>
   <button mat-button>Quero receber!</button>
+=======
+  <mat-grid-list cols="6" rowHeight="300px">
+    <mat-grid-tile>
+      <mat-card class="cardServicos">
+        <mat-card-header>
+          <mat-card-title>Banho & Tosa</mat-card-title>
+        </mat-card-header>
+        <img matCardImage src="../../assets/adotegato.png" />
+        <mat-card-content> Text content </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-card class="cardServicos">
+        <mat-card-header>
+          <mat-card-title>Pet Sitter</mat-card-title>
+        </mat-card-header>
+        <img matCardImage src="../../assets/adotegato.png" />
+        <mat-card-content> Text content </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-card class="cardServicos">
+        <mat-card-header>
+          <mat-card-title>Dog Walker</mat-card-title>
+        </mat-card-header>
+        <img matCardImage src="../../assets/adotegato.png" />
+        <mat-card-content> Text content </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-card class="cardServicos">
+        <mat-card-header>
+          <mat-card-title>Creche Pet</mat-card-title>
+        </mat-card-header>
+        <img matCardImage src="../../assets/adotegato.png" />
+        <mat-card-content> Text content </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-card class="cardServicos">
+        <mat-card-header>
+          <mat-card-title>Adestramento de Cães</mat-card-title>
+        </mat-card-header>
+        <img matCardImage src="../../assets/adotegato.png" />
+        <mat-card-content> Text content </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-card class="cardServicos">
+        <mat-card-header>
+          <mat-card-title>Veterinário</mat-card-title>
+        </mat-card-header>
+        <img matCardImage src="../../assets/adotegato.png" />
+        <mat-card-content> Text content </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+
+<div>
+  <mat-card>
+    <h1>Receba Nossa newsletter</h1>
+    <h5>
+      Fique por dentro das promoções exclusivas, dicas e descontos da Petshop
+      Code.
+    </h5>
+>>>>>>> 362e28f7e2e3b23802cbf1f865815d5a842be66a
   </mat-card>
 <mat-toolbar>
   <span class="example-spacer"></span><a>Encontre a loja mais próxima de você</a>
 </mat-toolbar>
 
-<footer>
-</footer>
+<footer></footer>

@@ -1,20 +1,39 @@
 <mat-toolbar>
-  <a [routerLink]="''" class="link-toolbar"> <img src="..\assets\PetShopLogoP.png" alt="Logo de Cachorro Laranja com teclado de computador">
-    <span>PetShop Code</span></a>
+  <a [routerLink]="''" class="link-toolbar">
+    <img
+      src="..\assets\PetShopLogoP.png"
+      alt="Logo de Cachorro Laranja com teclado de computador"
+    />
+    <span>PetShop Code</span></a
+  >
   <span class="example-spacer"></span>
 </mat-toolbar>
 
 <mat-card>
-<h2>Product Details</h2>
+  <div *ngIf="product">
+    <h2 style="cursor: pointer" (click)="addToCart(product)">
+      <span class="material-icons"> add_shopping_cart </span>
+      Adicionar Produto
+    </h2>
 
-<div *ngIf="product">
-  <h3>{{ product.name }}</h3>
-  <h4>{{ product.price | currency: 'R$' }}</h4>
-    <p *ngIf="product.description">
-    Descrição: {{ product.description }}
-     </p>
-     <span class="material-icons" (click)="addToCart(product)">
-      add_shopping_cart
-      </span>
-</div>
+    <mat-card-title-group
+      ><mat-card-title>{{ product.name }}</mat-card-title></mat-card-title-group
+    >
+    <mat-card-subtitle>{{ product.price | currency: "R$" }}</mat-card-subtitle>
+    <mat-card-title-group>
+      <mat-card-content>
+        <p *ngIf="product.description">
+          Descrição: <br />
+          <br />
+          {{ product.description }}
+        </p>
+      </mat-card-content>
+      <img mat-card-xl-image [src]="product.url_image" />
+    </mat-card-title-group>
+
+    <h3 style="cursor: pointer" (click)="back()">
+      <span class="material-icons"> arrow_back </span>
+      Voltar
+    </h3>
+  </div>
 </mat-card>

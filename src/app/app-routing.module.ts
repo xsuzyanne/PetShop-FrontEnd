@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ShipAddressComponent } from './ship-address/ship-address.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { ProductNewDetailsComponent } from './product-new/product-new-details.component';
 import { LoginComponent } from './login/login.component';
 import { UserRegistrationComponent } from './user-registration/user-registration.component';
 import { CartComponent } from './cart/cart.component';
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'products', component: ProductListComponent },
   { path: 'products/:productId', component: ProductDetailsComponent },
   { path: 'products/edit/:productId', component: ProductEditDetailsComponent },
+  { path: 'new', component: ProductNewDetailsComponent },
   { path: 'compartilhar', component: ShipAddressComponent },
   { path: 'login', component: LoginComponent },
   { path: 'cadastro', component: UserRegistrationComponent },
