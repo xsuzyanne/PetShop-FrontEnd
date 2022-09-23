@@ -2,21 +2,28 @@
   flex: 1 1 auto;
 }
 
-.mat-toolbar{
-  background-color: #4E0D3A;
+.mat-toolbar {
+  background-color: #4e0d3a;
   box-shadow: 0 3px 5px -1px #0003, 0 6px 10px #00000024, 0 1px 18px #0000001f;
 }
 
 .mat-card {
   text-align: center;
   margin: 40px;
-  background-color: #F9AA33;
+  background-color: #f9aa33;
   padding: 40px;
-  box-shadow: 10px 10px 5px -1px #0003, 0 6px 10px #00000024, 0 1px 18px #0000001f;
+  box-shadow: 10px 10px 5px -1px #0003, 0 6px 10px #00000024,
+    0 1px 18px #0000001f;
 }
 
 .link-toolbar {
   color: white;
   text-decoration: none;
   margin: 10px;
+}
+
+.image-product {
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
 }
